@@ -1,0 +1,8 @@
+<div ng-controller="userCtrl">
+	<div>用户名:{{userinfo.name}}</div>
+	<div>用户年龄:{{userinfo.age}}</div>
+	<div>用户性别:{{userinfo.gender}}</div>
+	<div ui-view>
+		<a ui-sref="app.users.user">修改个人资料</a>
+	</div>
+</div>

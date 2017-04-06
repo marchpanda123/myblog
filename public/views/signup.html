@@ -1,0 +1,28 @@
+<div class="ngdialog-message" ng-controller="userCtrl">
+    <div class="">
+        <h3>注册新用户 </h3>
+    </div>
+    <div class="">&nbsp;</div>
+    <div class="">
+        <form name="signup_form" ng-submit="doSignUp()">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control input-sm" id="username" placeholder="Email" ng-model="userSignUp.username" name="username" ng-minlength="4"  ng-maxlength="24" required>
+                <div class="input-error-set">
+                    <div ng-if="signup_form.username.$error.required">用户名为必填项</div>
+                    <div ng-if="signup_form.username.$error.maxlength|| signup_form.username.$error.minlength">用户名长度需在4至24位之间</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control input-sm" id="password" placeholder="Password" ng-model="userSignUp.password"  name="password" ng-minlength="6"  ng-maxlength="255" required>
+                <div class="input-error-set">
+                    <div ng-if="signup_form.password.$error.required">密码为必填项</div>
+                    <div ng-if="signup_form.password.$error.minlength">密码必须大于6位</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info btn-sm" ng-disabled="signup_form.$invalid">注册</button>
+            <button type="button" class="btn btn-default btn-sm" ng-click=closeThisDialog("Cancel")>取消</button>
+        </form>
+    </div>
+</div>

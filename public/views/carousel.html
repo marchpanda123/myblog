@@ -1,0 +1,51 @@
+<div id="content" ng-controller="carouselCtrl">
+    <div class="container background-white">
+        <div class="row margin-vert-30">
+            <!-- Main Column -->
+            <div class="col-md-9">
+                <div class="blog-post">
+                    <div class="blog-item">
+                        <div class="blog-item-footer">
+                            <div class="blog-recent-comments panel panel-default margin-bottom-30">
+                                <div class="panel-heading">
+                                    <h3>上传轮播图片</h3>
+                                </div>
+                                <ul class="list-group">
+                                    <!-- Comment Form -->
+                                    <li class="list-group-item">
+                                        <div class="blog-comment-form">
+                                            
+                                            <div class="row margin-top-20">
+                                                <div class="col-md-12">
+                                                    <form>
+                                                        <label for="exampleInputFile">轮播图片</label>
+                                                        <div class="row margin-bottom-20">
+                                                            <div class="col-md-7 col-md-offset-0">
+                                                                <input type="file" id="exampleInputFile" class="form-control" file-model="carouselsPic.image">
+                                                                <button type="submit" class="btn btn-primary" ng-click="SubmitUploadCarousel()">提交</button>
+                                                                <img ng-src="../uploads/{{currentCarousels.carouselImage}}" style="width: 50px">
+                                                            </div>
+                                                        </div>
+                                                        <p>
+                                                            <button class="btn btn-primary" type="submit" ng-click="submitCarousel(currentCarousels)">保存图片</button>
+                                                        </p>
+                                                    </form>
+                                                    <div ng-repeat="item in carousels">
+                                                        <img ng-src="../uploads/{{item.carouselImage}}" style="width: 500px">
+                                                        <button type="button" class="btn btn-danger" ng-click="deleteCarousel(item)">删除</button>    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- End Comment Form -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

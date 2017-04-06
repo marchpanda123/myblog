@@ -1,0 +1,73 @@
+<div id="content" ng-controller="articleCtrl">
+    <div class="container background-white">
+        <div class="row margin-vert-30">
+            <!-- Main Column -->
+            <div class="col-md-9">
+                <div class="blog-post">
+                    <div class="blog-item">
+                        <div class="blog-item-footer">
+                            <div class="blog-recent-comments panel panel-default margin-bottom-30">
+                                <div class="panel-heading">
+                                    <h3x>修改文章</h3>
+                                </div>
+                                <ul class="list-group">
+                                    <!-- Comment Form -->
+                                    <li class="list-group-item">
+                                        <div class="blog-comment-form">
+                                            <div class="row margin-top-20">
+                                                <div class="col-md-12">
+                                                    <div class="pull-left">
+                                                        <h3>开始修改</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row margin-top-20">
+                                                <div class="col-md-12">
+                                                    <form>
+                                                        <label>文章标题</label>
+                                                        <div class="row margin-bottom-20">
+                                                            <div class="col-md-7 col-md-offset-0">
+                                                                <input class="form-control" type="text" ng-model="editArticle.title">
+                                                            </div>
+                                                        </div>
+                                                        <label for="exampleInputFile">文章封面</label>
+                                                        <div class="row margin-bottom-20">
+                                                            <div class="col-md-7 col-md-offset-0">
+                                                                <input type="file" id="exampleInputFile" class="form-control" file-model="customer.image">
+                                                                <button type="submit" class="btn btn-primary" ng-click="Submit()">提交</button>
+                                                                <img ng-src="../uploads/{{editArticle.pageImage}}" style="width: 50px">
+                                                            </div>
+                                                        </div>
+                                                        <label>文章介绍
+                                                            <span>*</span>
+                                                        </label>
+                                                        <div class="row margin-bottom-20">
+                                                            <div class="col-md-7 col-md-offset-0">
+                                                                <input class="form-control" type="text" ng-model="editArticle.introduction">
+                                                            </div>
+                                                        </div>
+                                                        <label>文章内容</label>
+                                                        <div class="row margin-bottom-20">
+                                                            <div class="col-md-11 col-md-offset-0">
+                                                                <textarea ckeditor class="form-control" ng-model="editArticle.content"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <p>
+                                                            <button class="btn btn-primary" ng-click="updateArticle(editArticle)">保存文章</button>
+                                                            <button class="btn btn-danger" ng-click="cancelArticle()">取消</button>
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- End Comment Form -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

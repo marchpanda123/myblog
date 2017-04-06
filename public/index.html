@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="startApp">
+<head>
+	<!-- Title -->
+    <title>My Blog</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="css/assets/ngDialog.min.css">
+    <link rel="stylesheet" type="text/css" href="css/assets/ngDialog-theme-default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/assets/ngDialog-theme-plain.min.css">
+</head>
+
+<body>
+    <div id="body-bg">
+    <ul class="social-icons pull-right hidden-xs" ng-controller="userCtrl">
+        <li class="social-login">
+            <a ng-if="!isAuthenticated" ng-click="openLogin()" target="_blank" title="login"></a>
+        </li>
+        <li class="social-login-1">
+            <a ng-if="isAuthenticated" target="_blank" title="login"></a>
+        </li>
+        <li class="social-logout">
+            <a ng-if="isAuthenticated" ng-click="logOut()" target="_blank" title="logout"></a>
+        </li>
+        <!-- <li class="social-rss">
+            <a target="_blank" title="RSS"></a>
+        </li>
+        <li class="social-twitter">
+            <a href="#" target="_blank" title="Twitter"></a>
+        </li>
+        <li class="social-facebook">
+            <a href="#" target="_blank" title="Facebook"></a>
+        </li>
+        <li class="social-googleplus">
+            <a href="#" target="_blank" title="GooglePlus"></a>
+        </li> -->
+        
+    </ul>
+    <div id="pre-header" class="container" style="height:340px">
+    </div>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="">
+                        <img src="img/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+        </div>
+    </div>
+    <div ui-view="header"></div>
+    
+    <div ui-view="content"></div>
+
+    <div ui-view="footer"></div>
+
+
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/assets/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/assets/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/assets/scripts.js"></script>
+    <!-- Isotope - Portfolio Sorting -->
+    <script type="text/javascript" src="js/assets/jquery.isotope.js" type="text/javascript"></script>
+    <!-- Mobile Menu - Slicknav -->
+    <script type="text/javascript" src="js/assets/jquery.slicknav.js" type="text/javascript"></script>
+    <!-- Animate on Scroll-->
+    <script type="text/javascript" src="js/assets/jquery.visible.js" charset="utf-8"></script>
+    <!-- Sticky Div -->
+    <script type="text/javascript" src="js/assets/jquery.sticky.js" charset="utf-8"></script>
+    <!-- Slimbox2-->
+    <script type="text/javascript" src="js/assets/slimbox2.js" charset="utf-8"></script>
+    <!-- Modernizr -->
+    <script src="js/assets/modernizr.custom.js" type="text/javascript"></script>
+    <!-- angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    
+    <script src="js/assets/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="js/assets/ngDialog.min.js"></script>
+    <script src="lib/ckeditor/ckeditor.js"></script>
+
+    <script src="js/base.js"></script>
+    <script src="js/controllers/articleControllers.js"></script>
+    <script src="js/controllers/userControllers.js"></script>
+    <script src="js/controllers/checkInCtrl.js"></script>
+    <script src="js/services/authServices.js"></script>
+    <script src="js/services/articleServices.js"></script>
+    <script src="js/services/checkinServices.js"></script>
+    <script src="js/controllers/commenCtrl.js"></script>
+    <script src="js/controllers/carouselCtrl.js"></script>
+    <script src="js/services/carouselServices.js"></script>
+    <!-- End JS -->
+</body>
+</html>
